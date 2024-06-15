@@ -1,5 +1,5 @@
 const container = document.querySelector("#container")
- 
+
 function createGrid(row,col){
     for(let i = 0;i<row;i++){
         //each row gets class row
@@ -27,4 +27,9 @@ const elements = document.querySelectorAll(".tile");
 elements.forEach((element) => {
     element.setAttribute("style","border: 1px solid red; flex: 1; background-color; red")
 
+})
+elements.forEach((element) =>{
+    element.addEventListener("mouseover", function(){
+        element.setAttribute("style","border: 1px solid red; flex: 1; background-color: blue;");
+    });
 })
