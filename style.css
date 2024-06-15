@@ -11,6 +11,7 @@ body{
     flex-direction: column;
     width: 960px;
     border: 1px black solid;
+    height: 960px;
 }
 button{
     align-self: flex-start;
