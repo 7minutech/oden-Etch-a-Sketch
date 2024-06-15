@@ -2,7 +2,10 @@ const container = document.querySelector("#container")
 const newGridButton = document.getElementById("newGrid");
 const clearGridButton = document.getElementById("clearGrid");
 
+function randomColor(){
+    return '#'+(Math.random() * 0xFFFFFF << 0).toString(16).padStart(6, '0');
 
+}
 function createGrid(row,col){
     for(let i = 0;i<row;i++){
         //each row gets class row
@@ -22,17 +25,17 @@ function createGrid(row,col){
     })
     let elements = document.querySelectorAll(".tile");
     elements.forEach((element) => {
-        element.setAttribute("style","flex: 1;min-height: 50px;min-width:50px");
+        element.setAttribute("style","flex: 1;");
     
     })
     elements.forEach((element) =>{
         element.addEventListener("mouseover", function(){
-            element.setAttribute("style","flex: 1; background-color: #86b6b6;min-height: 50px;min-width:50px");
+            element.setAttribute("style",`flex: 1; background-color: ${randomColor()};`);
         });
     })
     clearGridButton.addEventListener("click",function(){
         elements.forEach((element) => {
-            element.setAttribute("style","flex: 1;min-height: 50px;min-width:50px");
+            element.setAttribute("style","flex: 1;");
         })
     })
 
