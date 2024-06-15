@@ -10,6 +10,7 @@ body{
     display: flex;  
     flex-direction: column;
     width: 960px;
+    border: 1px black solid;
 }
 button{
     align-self: flex-start;
