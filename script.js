@@ -30,13 +30,19 @@ function createGrid(row,col){
     })
     elements.forEach((element) =>{
         element.addEventListener("mouseover", function(){
-            element.setAttribute("style",`flex: 1; background-color: ${randomColor()};`);
+            if(!(element.hasAttribute("id"))){
+                element.setAttribute("style",`flex: 1; background-color: ${randomColor()};`);
+                element.setAttribute("id","colored");
+            }
+            
         });
     })
     clearGridButton.addEventListener("click",function(){
         elements.forEach((element) => {
             element.setAttribute("style","flex: 1;");
+            element.removeAttribute("id");
         })
+        
     })
 
 }
