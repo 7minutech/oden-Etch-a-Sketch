@@ -25,12 +25,12 @@ rows.forEach((row) => {
 //sets style to tiles
 const elements = document.querySelectorAll(".tile");
 elements.forEach((element) => {
-    element.setAttribute("style","border: 1px solid red; flex: 1; background-color; red");
+    element.setAttribute("style","border: 1px solid red; flex: 1;");
 
 })
 elements.forEach((element) =>{
     element.addEventListener("mouseover", function(){
-        element.setAttribute("style","border: 1px solid red; flex: 1; background-color: blue;");
+        element.setAttribute("style","border: 1px solid red; flex: 1; background-color: #86b6b6;");
     });
 })
 const newGridButton = document.getElementById("newGrid");
@@ -38,6 +38,6 @@ const clearGridButton = document.getElementById("clearGrid");
 
 clearGridButton.addEventListener("click",function(){
     elements.forEach((element) => {
-        element.setAttribute("style","border: 1px solid red; flex: 1; background-color; red");
+        element.setAttribute("style","border: 1px solid red; flex: 1;");
     })
 })
