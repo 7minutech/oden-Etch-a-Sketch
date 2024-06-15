@@ -61,7 +61,10 @@ rows.forEach((row) => {
 
 newGridButton.addEventListener("click",function(){
     let dimension = prompt("Please enter the dimension of the new grid: ");
-    dimension = parseInt(dimension);
+    if(dimension > 100){
+        alert("Over limit of 100")
+        dimension = prompt("Please enter the dimension of the new grid: ");
+    }
     deleteGrid();
     createGrid(dimension,dimension);
 })
